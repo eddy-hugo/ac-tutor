@@ -1,0 +1,11 @@
+<h3>Top Tutors</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let tutor of tutors" class="col-1-4"
+    routerLink="/detail/{{tutor.id}}">
+    <div class="module tutor">
+      <h4>{{tutor.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-tutor-search></app-tutor-search>

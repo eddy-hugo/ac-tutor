@@ -1,0 +1,33 @@
+
+<!--<h2>My Tutors</h2>
+<ul class="tutors">
+    <li *ngFor="let tutor of tutors">
+    <a routerLink="/detail/{{tutor.id}}">
+        <span class="badge">{{tutor.id}}</span> {{tutor.firstname}}{{tutor.lastname}}
+    
+        </a>
+      </li>
+</ul> -->
+
+<div>
+    <label>Fisr name:
+      <input #fisrtName />
+    </label>
+    <label>Last name:
+        <input #lastName />
+      </label>
+      <label>Email:
+        <input #email />
+      </label>
+     <!--(click) passes input value to add() and then clears the input-->
+    <button (click)="add(fisrtName.value); fisrtName.value=''">
+      add
+    </button>
+  </div>
+  <ul class="tutors">
+    <li *ngFor="let tutor of tutors">
+      <a routerLink="/detail/{{tutor.id}}">
+        <span class="badge">{{tutor.id}}</span> {{tutor.firstname}} {{tutor.lastname}}
+      </a>
+    </li>
+  </ul>
