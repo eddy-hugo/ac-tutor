@@ -1,63 +1,53 @@
 package com.demo.actutor.dto;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+
 
 @Entity
 @Table(name = "tutor")
 public class TutorDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
+	@Column(name = "tutor_id")
 	private Long id;
-
-	@Column(name = "firstname")
-	@NotEmpty(message = "Please provide your name")
-	private String firstname;
 	
-	@Column(name = "lastname")
-	@NotEmpty(message = "Please provide your name")
-	private String lastname;
+	@Column(name = "user_name")
+	@NotEmpty(message = "Please provide your first name")
+    private String username;
+	
+	@Column(name = "first_name")
+	@NotEmpty(message = "Please provide your first name")
+    private String firstName;
+	
+	@Column(name = "last_name")
+	@NotEmpty(message = "Please provide your last name")
+    private String lastName;
 	
 	@Column(name = "email", nullable = false, unique = true)
+	@Email(message = "Please provide a valid Email")
 	@NotEmpty(message = "Please provide an Email")
-	private String email;
+    private String email;
 	
-	public String getFirstname() {
-		return firstname;
-	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	@Column(name = "phone")
+	@NotEmpty(message = "Please provide your phone number")
+    private String phone;
+	
+	@ManyToMany
+	@JoinTable(name = "tutor_subjects", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "subject_id") })
+	private Set<SubjectDTO> subjects;
+	
+	
 }
