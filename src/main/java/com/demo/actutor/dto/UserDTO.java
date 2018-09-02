@@ -53,10 +53,7 @@ public class UserDTO {
 	@JoinColumn(name = "role_id")
 	private RoleDTO role;
 
-	@ManyToMany
-	@JoinTable(name = "favorite", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "house_id") })
-	private Set<SessionDTO> sessions;
+
 
 	public Long getId() {
 		return id;
@@ -96,14 +93,6 @@ public class UserDTO {
 
 		return "UserDTO [user_id=" + id + ", userName=" + name + ", password=" + password + ", phone=" + phone
 				+ ", email=" + email + ", houses=" + "]";
-	}
-
-	public Set<SessionDTO> getSessions() {
-		return sessions;
-	}
-
-	public void setSessions(Set<SessionDTO> sessions) {
-		this.sessions = sessions;
 	}
 
 	public String getEmail() {

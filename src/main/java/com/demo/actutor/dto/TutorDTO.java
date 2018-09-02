@@ -53,6 +53,11 @@ public class TutorDTO {
 	@JoinTable(name = "tutor_available_time", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "time_id") })
 	private Set<DatetimeDTO> availableTime;
+	
+	@ManyToMany
+	@JoinTable(name = "sessions", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "session_id") })
+	private Set<SessionDTO> sessions;
 
 	public Long getId() {
 		return id;
@@ -116,6 +121,14 @@ public class TutorDTO {
 
 	public void setAvailableTime(Set<DatetimeDTO> availableTime) {
 		this.availableTime = availableTime;
+	}
+
+	public Set<SessionDTO> getSessions() {
+		return sessions;
+	}
+
+	public void setSessions(Set<SessionDTO> sessions) {
+		this.sessions = sessions;
 	}
 	
 	

@@ -1,10 +1,15 @@
 package com.demo.actutor.dto;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -39,7 +44,10 @@ public class StudentDTO {
 	@NotEmpty(message = "Please provide your phone number")
     private String phone;
 	
-	
+	@ManyToMany
+	@JoinTable(name = "sessions", joinColumns = { @JoinColumn(name = "student_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "session_id") })
+	private Set<SessionDTO> sessions;
 
 	public Long getId() {
 		return id;
@@ -87,6 +95,14 @@ public class StudentDTO {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public Set<SessionDTO> getSessions() {
+		return sessions;
+	}
+
+	public void setSessions(Set<SessionDTO> sessions) {
+		this.sessions = sessions;
 	}
 	
 	
