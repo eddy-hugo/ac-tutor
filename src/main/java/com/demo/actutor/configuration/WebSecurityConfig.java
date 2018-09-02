@@ -12,6 +12,22 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.csrf().disable();
+		http.authorizeRequests()
+        .antMatchers("/login").permitAll()
+        .antMatchers("/signup").permitAll();
+	}
+
+}
+
+/*
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -41,12 +57,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+
 		http
 			.authorizeRequests()
-				.antMatchers("/", "/index", "/login", "/signup").permitAll()
-				.antMatchers("/admin/**").hasAuthority("ADMIN")
-				.antMatchers("/user/**").hasAnyAuthority("ADMIN", "USER")
-				.anyRequest().authenticated()
+			.antMatchers("/", "/index", "/login", "/signup").permitAll()
+			.antMatchers("/admin/**").hasAuthority("ADMIN")
+			.antMatchers("/user/**").hasAnyAuthority("ADMIN", "USER")
+			.anyRequest().authenticated()
 			.and()
 				.formLogin()
 				.loginPage("/login")
@@ -56,8 +73,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.passwordParameter("password")
 			.and()
 				.logout().permitAll()
-				.logoutSuccessUrl("/index");
-	}
+				.logoutSuccessUrl("/index");  
+	} 
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
@@ -65,4 +82,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	       .ignoring()
 	       .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
 	}
-}
+} */

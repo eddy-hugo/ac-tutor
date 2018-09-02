@@ -52,11 +52,11 @@ public class TutorController {
     public TutorDTO updateUser(@PathVariable(value = "id") Long tutorId, @Valid @RequestBody TutorDTO tutorDetails) {
 
         TutorDTO tutor = tutorRepository.findById(tutorId).orElseThrow(() -> new ResourceNotFoundException("Tutor", "id", tutorId));
-
+/*
         tutor.setFirstname(tutorDetails.getFirstname());
         tutor.setLastname(tutorDetails.getLastname());
         tutor.setEmail(tutorDetails.getEmail());
-
+*/
         return  tutorRepository.save(tutor);
     }
     // Delete a Tutor
