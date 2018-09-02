@@ -45,9 +45,78 @@ public class TutorDTO {
     private String phone;
 	
 	@ManyToMany
-	@JoinTable(name = "tutor_subjects", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
+	@JoinTable(name = "tutor_subjects", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "subject_id") })
 	private Set<SubjectDTO> subjects;
+	
+	@ManyToMany
+	@JoinTable(name = "tutor_available_time", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "time_id") })
+	private Set<DatetimeDTO> availableTime;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public Set<SubjectDTO> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(Set<SubjectDTO> subjects) {
+		this.subjects = subjects;
+	}
+
+	public Set<DatetimeDTO> getAvailableTime() {
+		return availableTime;
+	}
+
+	public void setAvailableTime(Set<DatetimeDTO> availableTime) {
+		this.availableTime = availableTime;
+	}
 	
 	
 }

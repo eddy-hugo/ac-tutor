@@ -35,23 +35,21 @@ public class UserController {
     public UserDTO getUserById(@PathVariable(value = "id") Long userId) {
         return userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
     }
-    // Update a Note
+    // Update a User
     @PutMapping(path="/update/{id}")
     public UserDTO updateUser(@PathVariable(value = "id") Long userId, @Valid @RequestBody UserDTO userDetails) {
 
         UserDTO user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
-        /*
-        user.setName(userDetails.getName());
-        //user.setLastName(userDetails.getLastName());
 
+        user.setName(userDetails.getName());
         user.setPassword(userDetails.getPassword());
         user.setEmail(userDetails.getEmail());
-        user.setPhone(userDetails.getPhone()); */
+        user.setPhone(userDetails.getPhone()); 
 
         return  userRepository.save(user);
     }
-    // Delete a Note
+    // Delete a User
     @DeleteMapping(path="/delete/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long userId) {
         UserDTO user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));

@@ -1,13 +1,16 @@
 package com.demo.actutor.dto;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 
-
+@Entity
+@Table(name = "subject")
 public class SubjectDTO {
 
 	@Id
@@ -18,6 +21,10 @@ public class SubjectDTO {
 	@Column(name = "subject_name")
 	@NotEmpty(message = "Please provide the subject's name")
 	private String subjectName;
+	
+	@Column(name = "subject_description")
+	@NotEmpty(message = "Please provide the subject's description")
+	private String subjectDescription;
 
 	public Long getId() {
 		return id;
@@ -33,6 +40,14 @@ public class SubjectDTO {
 
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
+	}
+
+	public String getSubjectDescription() {
+		return subjectDescription;
+	}
+
+	public void setSubjectDescription(String subjectDescription) {
+		this.subjectDescription = subjectDescription;
 	} 
 
 }

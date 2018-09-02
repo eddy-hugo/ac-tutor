@@ -49,19 +49,23 @@ public class TutorController {
     }
     // Update a Tutor
     @PutMapping(path="/update/{id}")
-    public TutorDTO updateUser(@PathVariable(value = "id") Long tutorId, @Valid @RequestBody TutorDTO tutorDetails) {
+    public TutorDTO updateTutor(@PathVariable(value = "id") Long tutorId, @Valid @RequestBody TutorDTO tutorDetails) {
 
         TutorDTO tutor = tutorRepository.findById(tutorId).orElseThrow(() -> new ResourceNotFoundException("Tutor", "id", tutorId));
-/*
-        tutor.setFirstname(tutorDetails.getFirstname());
-        tutor.setLastname(tutorDetails.getLastname());
+
+        tutor.setUsername(tutorDetails.getUsername());
+        tutor.setFirstName(tutorDetails.getFirstName());
+        tutor.setLastName(tutorDetails.getLastName());
         tutor.setEmail(tutorDetails.getEmail());
-*/
+        tutor.setPhone(tutorDetails.getPhone());
+        tutor.setSubjects(tutorDetails.getSubjects());
+        tutor.setAvailableTime(tutorDetails.getAvailableTime());
+        
         return  tutorRepository.save(tutor);
     }
     // Delete a Tutor
     @DeleteMapping(path="/delete/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long tutorId) {
+    public ResponseEntity<?> deleteTutor(@PathVariable(value = "id") Long tutorId) {
         TutorDTO tutor = tutorRepository.findById(tutorId).orElseThrow(() -> new ResourceNotFoundException("User", "id", tutorId));
 
         tutorRepository.delete(tutor);
