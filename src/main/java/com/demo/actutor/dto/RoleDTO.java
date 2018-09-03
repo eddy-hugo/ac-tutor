@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,6 +26,39 @@ public class RoleDTO {
 
 	@Column(name = "role_type")
 	private String type;
+
+	/*@OneToMany
+	@JoinColumn(name="student_id")
+	private Long studentId;
+
+	public Long getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(Long studentId) {
+		this.studentId = studentId;
+	}
+*/
+	/*public Long getTutorId() {
+		return tutorId;
+	}
+
+	public void setTutorId(Long tutorId) {
+		this.tutorId = tutorId;
+	}
+*/
+	public List<UserDTO> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<UserDTO> users) {
+		this.users = users;
+	}
+
+	/*@OneToMany
+	@JoinColumn(name="tutor_id")
+	private Long tutorId;
+*/
 
 	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<UserDTO> users = new ArrayList<>();

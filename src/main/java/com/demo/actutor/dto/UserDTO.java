@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -52,8 +53,32 @@ public class UserDTO {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "role_id")
 	private RoleDTO role;
+	
+	@OneToOne
+	@JoinColumn(name = "tutor_id")
+	private TutorDTO tutor;
+	
+	@OneToOne
+	@JoinColumn(name = "student_id")
+	private StudentDTO student;
 
 
+
+	public TutorDTO getTutor() {
+		return tutor;
+	}
+
+	public void setTutor(TutorDTO tutor) {
+		this.tutor = tutor;
+	}
+
+	public StudentDTO getStudent() {
+		return student;
+	}
+
+	public void setStudent(StudentDTO student) {
+		this.student = student;
+	}
 
 	public Long getId() {
 		return id;
