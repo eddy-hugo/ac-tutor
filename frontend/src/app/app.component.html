@@ -1,40 +1,587 @@
-<!--The content below is only a placeholder and can be replaced.-->
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="https://d1qahdsb4j3l6a.cloudfront.net/3f3d041a94ae9b79ea3089c7663efb5e3f665f5c.css?meteor_css_resource=true&amp;_g_app_v_=706">
-<meta name="fragment" content="!">
-<title>TutorOcean - Connecting Tutors and Students Worldwide</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="https://d1qahdsb4j3l6a.cloudfront.net/assets/images/favicon.png">
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
-	<noscript><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"></noscript>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-itunes-app" content="app-id=915930220">
+    <meta name="description" content="Get help from expert online tutors over online messaging and tutoring calls, 24/7. Get started with online tutoring today!" />
+    <link rel="image_src" href="https://helphub.me/img/ogimage.jpg" />
+    <meta property="og:image" content="https://helphub.me/img/ogimage.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HelpHub" />
+    <meta property="og:url" content="https://helphub.me/" />
+    <meta property="og:description" content="HelpHub connects students with tutors over online messaging and tutoring calls." />
+ 
+    <title>HelpHub – Online Tutors & Online Homework Help</title>
 
-</head>
-<body>
-<noscript>Sorry, your browser does not support JavaScript! If possible, please enable JavaScript on your browser or switch to another browser (Chrome, Firefox, Safari).</noscript>
-	<div id="app"></div>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/basics.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/lp.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <script src="/js/lp_js.js"></script>
+    <script src="/functions.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("96c84aa9e26ab91ee361872c1c01a430");</script>
+  </head>
+
+  <body>
 
 
-  <script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.6.0.1%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22production%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%22teamEmail%22%3A%22team%40tutorocean.com%22%2C%22notificationEmail%22%3A%22notifications%40mg.tutorocean.com%22%2C%22uploadImageMaxSize%22%3A3145728%2C%22thumbnailCdnUrl%22%3A%22https%3A%2F%2Fd32k3azx7l8gc8.cloudfront.net%22%2C%22stripe%22%3A%7B%22publishableKey%22%3A%22pk_live_SUZkZ0TRydQOoWuoKZlSkIYh%22%2C%22platformClientId%22%3A%22ca_BfTcNf1STsEPZ58otYQ3vGkrk8ATpd7u%22%2C%22oAuthAuthorizeUri%22%3A%22https%3A%2F%2Fconnect.stripe.com%2Foauth%2Fauthorize%22%2C%22setupConnectUri%22%3A%22https%3A%2F%2Fconnect.stripe.com%2Flogin%3Fredirect%3D%252Foauth%252Fauthorize%253Fscope%253Dread_write%2526response_type%253Dcode%2526client_id%253D%22%7D%2C%22analyticsSettings%22%3A%7B%22Google%20Analytics%22%3A%7B%22trackingId%22%3A%22UA-107919122-1%22%2C%22sendUserId%22%3Atrue%7D%7D%2C%22paypal%22%3A%7B%22env%22%3A%22production%22%2C%22sandboxID%22%3A%22AY2TKRsGnNu_pOkaze9PjmwNgPaKoHuc0n_50y65d5qVE_cCL_45joawchpqZwvJeDSrJFf8qxUQnEk6%22%2C%22productionID%22%3A%22AZF3Fv_D0mMl0mo5D2iNIdBqTe7XXrJUtUTEpQSiWSw2hbONYdOGpKUMC1SxL8h7lX808H5qcHigLV2_%22%2C%22clientID%22%3A%22AZF3Fv_D0mMl0mo5D2iNIdBqTe7XXrJUtUTEpQSiWSw2hbONYdOGpKUMC1SxL8h7lX808H5qcHigLV2_%22%2C%22clientSecretID%22%3A%22ELtxURTO3yauZ16tqEX3eqTWh4oTgzo6CosYtASkZnaYhXav6S7O3_zv8o2pJ3wTGh848Pe3MB1PA8dH%22%2C%22signupUrl%22%3A%22https%3A%2F%2Fwww.paypal.com%22%2C%22BNCode%22%3A%22TutorOcean_SP%22%7D%2C%22firebase%22%3A%7B%22apiKey%22%3A%22AIzaSyBfejD1ZPTEnMz-Ep7JnjAn7LFU2-Sanyw%22%2C%22authDomain%22%3A%22tc-test-84e1c.firebaseapp.com%22%2C%22databaseURL%22%3A%22https%3A%2F%2Ftc-test-84e1c.firebaseio.com%22%2C%22projectId%22%3A%22tc-test-84e1c%22%2C%22messagingSenderId%22%3A%22858183658693%22%7D%2C%22googleMaps%22%3A%7B%22apiKey%22%3A%22AIzaSyAq0kQb1zVRYFMW35N7MHrXp3fPyG_BVjg%22%7D%7D%2C%22ROOT_URL%22%3A%22https%3A%2F%2Fwww.tutorocean.com%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22kadira%22%3A%7B%22appId%22%3A%227TQ7XZZEvzpMgRQp2%22%2C%22endpoint%22%3A%22https%3A%2F%2Fapm-engine.meteor.com%22%2C%22clientEngineSyncDelay%22%3A10000%2C%22enableErrorTracking%22%3Atrue%7D%2C%22appId%22%3A%22a432rb1h16ihv1n6jv39%22%2C%22CDN_URL%22%3A%22https%3A%2F%2Fd1qahdsb4j3l6a.cloudfront.net%22%2C%22autoupdateVersion%22%3A%225bcadd793748dab83fbb73395789ee9ad9f1f56b%22%2C%22autoupdateVersionRefreshable%22%3A%22aa8d6c1f9ee09aa45b7b30b17aa5c5afd7fd78ea%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"))</script>
+<div class="navbar-default navbar-fixed-top header-bar" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h4 class="logo"><a href="/" class="indent">HelpHub</a></h4>
+    </div>
+    <div class="navbar-collapse collapse">
+      <div class="h-options">
+        <a data-toggle="modal" href="/online-tutoring-jobs" class="tutor-signup-option">Become a tutor</a><a data-toggle="modal" href="#" data-target="#SignUpModal" class="signup-option">Sign Up</a><a href="#" data-toggle="modal" data-target="#SignInModal" class="login-option">Log In</a>
+      </div>
+    </div><!--/.navbar-collapse -->
+  </div>
+</div><div id="hero">
+  <div class="herocontent">
+    <div class="container">
 
-  <script type="text/javascript" src="https://d1qahdsb4j3l6a.cloudfront.net/5ff7e40a2f971e14cae1c470e91e6426e2c42035.js?meteor_js_resource=true&amp;_g_app_v_=706"></script>
+            <h1>Study Smarter.</h1>
+              <h2>Connect with expert tutors 24/7 and instantly get the help you need.</h2>
+              <div class="landing_signup">
+        <a data-toggle="modal" href="#" data-target="#SignUpModal" class="signup_button">Sign up free</a>
+      </div>
+      
 
 
-</body>
+    </div>
 
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <nav>
-      <a routerLink="/dashboard">Dashboard</a>
-      <a routerLink="/tutors">Tutors</a>
-    </nav>
+    <div class="learn_more_hero">
+      <a name="more"></a>
+      <a href="#more" class="floating" id="learn_more">Learn more<br /><i class="glyphicon glyphicon-chevron-down"></i></a>
+    </div>
+    <div class="social_landing">
+      <div class="fb-facepile" data-app-id="279475605511244" data-action="become,ask" data-width="260" data-height="100" data-max-rows="1" data-colorscheme="dark" data-size="medium" data-show-count="true"></div>
+    </div>
+  </div>
+  <div class="patternbg"></div>
 </div>
-<router-outlet></router-outlet> 
-<app-messages></app-messages>
 
+
+<div id="landing">
+  <div class="container">
+
+      
+      <div class="prop">
+        <h1>On-Demand Help</h1>
+        <h2>HelpHub instantly connects tutors and students over online messaging and tutoring calls.</h2>
+      </div>
+
+      <div class="benefits">
+          <div class="benefit">
+              <img src="img/icon_1.png" />
+              <h2>Learn with the best</h2>
+              <h3>Our tutors are academic wizards from top schools around the globe.</h3>
+          </div>
+
+          <div class="benefit">
+              <img src="img/icon_2.png" />
+              <h2>Pay as-you-go</h2>
+              <h3>No commitments. No minimums. Just pay for what you need.</h3>
+          </div>
+
+          <div class="benefit">
+              <img src="img/icon_3.png" />
+              <h2>Master Any Subject</h2>
+              <h3>From English to Ecology, our tutors can help you master any subject.</h3>
+          </div>
+      </div>
+
+      <div class="press">
+        <h5>As featured in</h5>
+        <ul class="pressticker">
+          <li><img src="img/press/techcrunch.png" alt="Techcrunch" /></li>
+          <li><img alt="Globe and Mail" src="img/press/globeandmail.png" /></li>
+          <li><img src="img/press/educationweek.png" alt="Education Week" /></li>
+          <li><img src="img/press/biv.png" alt="Business in Vancouver" /></li>
+          <li><img src="img/press/global.png" alt="Global News" /></li>
+          <li><img src="img/press/macleans.png" alt="Maclean's Magazine" /></li>
+        </ul>
+      </div>
+
+  <!-- /container -->
+  </div>
+
+</div>
+
+<a name="search_index"></a>
+
+<div id="middle-search">
+  <div class="container">
+      <h1>Which subject do you need help with?</h1>
+      <form method="get" action="/search">
+          <span class="input-lp">
+            <input placeholder="e.g. Math, Calculus, English" class="landing_input ui-autocomplete-input" id="search" name="q" />
+            <span class="enter-input">Enter</span>
+          </span>
+      </form>
+
+      <div class="main-search-subjects row">
+              <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/math-tutors">Math tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Advanced Math tutors" title="Advanced Math tutors" href="/subject/advanced-math">Advanced Math</a></li>
+                            <li><a alt="Algebra tutors" title="Algebra tutors" href="/subject/algebra">Algebra</a></li>
+                            <li><a alt="Applied Math tutors" title="Applied Math tutors" href="/subject/applied-math">Applied Math</a></li>
+                            <li><a alt="Basic Math tutors" title="Basic Math tutors" href="/subject/basic-math">Basic Math</a></li>
+                            <li><a alt="Calculus tutors" title="Calculus tutors" href="/subject/calculus">Calculus</a></li>
+                            <li><a alt="Geometry tutors" title="Geometry tutors" href="/subject/geometry">Geometry</a></li>
+                            <li><a alt="Linear Algebra tutors" title="Linear Algebra tutors" href="/subject/linear-algebra">Linear Algebra</a></li>
+                            <li><a alt="Linear Programming tutors" title="Linear Programming tutors" href="/subject/linear-programming">Linear Programming</a></li>
+                            <li><a alt="Pre-Algebra tutors" title="Pre-Algebra tutors" href="/subject/pre-algebra">Pre-Algebra</a></li>
+                            <li><a alt="Pre-Calculus tutors" title="Pre-Calculus tutors" href="/subject/pre-calculus">Pre-Calculus</a></li>
+                            <li><a alt="Statistics tutors" title="Statistics tutors" href="/subject/statistics">Statistics</a></li>
+                            <li><a alt="Trigonometry tutors" title="Trigonometry tutors" href="/subject/trigonometry">Trigonometry</a></li>
+                            <li><a alt="Differential Calculus tutors" title="Differential Calculus tutors" href="/subject/differential-calculus">Differential Calculus</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/english-as-a-second-language-tutors">English As A Second Language tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Grammar tutors" title="Grammar tutors" href="/subject/grammar">Grammar</a></li>
+                            <li><a alt="Conversation tutors" title="Conversation tutors" href="/subject/conversation">Conversation</a></li>
+                            <li><a alt="Writing tutors" title="Writing tutors" href="/subject/writing">Writing</a></li>
+                            <li><a alt="Reading tutors" title="Reading tutors" href="/subject/reading">Reading</a></li>
+                            <li><a alt="Pronunciation tutors" title="Pronunciation tutors" href="/subject/pronunciation">Pronunciation</a></li>
+                            <li><a alt="TOEFL tutors" title="TOEFL tutors" href="/subject/toefl">TOEFL</a></li>
+                            <li><a alt="TOEIC tutors" title="TOEIC tutors" href="/subject/toeic">TOEIC</a></li>
+                            <li><a alt="IELTS tutors" title="IELTS tutors" href="/subject/ielts">IELTS</a></li>
+                            <li><a alt="BULATS tutors" title="BULATS tutors" href="/subject/bulats">BULATS</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/english-tutors">English tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Essay Writing tutors" title="Essay Writing tutors" href="/subject/essay-writing">Essay Writing</a></li>
+                            <li><a alt="Literature tutors" title="Literature tutors" href="/subject/literature">Literature</a></li>
+                            <li><a alt="Proofreading tutors" title="Proofreading tutors" href="/subject/proofreading">Proofreading</a></li>
+                            <li><a alt="Vocabulary tutors" title="Vocabulary tutors" href="/subject/vocabulary">Vocabulary</a></li>
+                            <li><a alt="Reading tutors" title="Reading tutors" href="/subject/reading">Reading</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/science-tutors">Science tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Agricultural Science tutors" title="Agricultural Science tutors" href="/subject/agricultural-science">Agricultural Science</a></li>
+                            <li><a alt="Astronomy tutors" title="Astronomy tutors" href="/subject/astronomy">Astronomy</a></li>
+                            <li><a alt="Astrophysics tutors" title="Astrophysics tutors" href="/subject/astrophysics">Astrophysics</a></li>
+                            <li><a alt="Basic Science tutors" title="Basic Science tutors" href="/subject/basic-science">Basic Science</a></li>
+                            <li><a alt="Biochemistry tutors" title="Biochemistry tutors" href="/subject/biochemistry">Biochemistry</a></li>
+                            <li><a alt="Biology tutors" title="Biology tutors" href="/subject/biology">Biology</a></li>
+                            <li><a alt="Chemistry tutors" title="Chemistry tutors" href="/subject/chemistry">Chemistry</a></li>
+                            <li><a alt="Earth Science tutors" title="Earth Science tutors" href="/subject/earth-science">Earth Science</a></li>
+                            <li><a alt="Environmental tutors" title="Environmental tutors" href="/subject/environmental">Environmental</a></li>
+                            <li><a alt="Geology tutors" title="Geology tutors" href="/subject/geology">Geology</a></li>
+                            <li><a alt="Health and Medicine tutors" title="Health and Medicine tutors" href="/subject/health-and-medicine">Health and Medicine</a></li>
+                            <li><a alt="Materials Science tutors" title="Materials Science tutors" href="/subject/materials-science">Materials Science</a></li>
+                            <li><a alt="Natural Sciences tutors" title="Natural Sciences tutors" href="/subject/natural-sciences">Natural Sciences</a></li>
+                            <li><a alt="Physics tutors" title="Physics tutors" href="/subject/physics">Physics</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/business-tutors">Business tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Economics tutors" title="Economics tutors" href="/subject/economics">Economics</a></li>
+                            <li><a alt="Macroeconomics tutors" title="Macroeconomics tutors" href="/subject/macroeconomics">Macroeconomics</a></li>
+                            <li><a alt="Microeconomics tutors" title="Microeconomics tutors" href="/subject/microeconomics">Microeconomics</a></li>
+                            <li><a alt="Econometrics tutors" title="Econometrics tutors" href="/subject/econometrics">Econometrics</a></li>
+                            <li><a alt="Finance tutors" title="Finance tutors" href="/subject/finance">Finance</a></li>
+                            <li><a alt="Accounting tutors" title="Accounting tutors" href="/subject/accounting">Accounting</a></li>
+                            <li><a alt="Marketing tutors" title="Marketing tutors" href="/subject/marketing">Marketing</a></li>
+                            <li><a alt="Sales tutors" title="Sales tutors" href="/subject/sales">Sales</a></li>
+                            <li><a alt="Administration tutors" title="Administration tutors" href="/subject/administration">Administration</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/languages-tutors">Languages tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Sign Language tutors" title="Sign Language tutors" href="/subject/sign-language">Sign Language</a></li>
+                            <li><a alt="Arabic tutors" title="Arabic tutors" href="/subject/arabic">Arabic</a></li>
+                            <li><a alt="Cantonese tutors" title="Cantonese tutors" href="/subject/cantonese">Cantonese</a></li>
+                            <li><a alt="French tutors" title="French tutors" href="/subject/french">French</a></li>
+                            <li><a alt="German tutors" title="German tutors" href="/subject/german">German</a></li>
+                            <li><a alt="Hebrew tutors" title="Hebrew tutors" href="/subject/hebrew">Hebrew</a></li>
+                            <li><a alt="Hindi tutors" title="Hindi tutors" href="/subject/hindi">Hindi</a></li>
+                            <li><a alt="Italian tutors" title="Italian tutors" href="/subject/italian">Italian</a></li>
+                            <li><a alt="Japanese tutors" title="Japanese tutors" href="/subject/japanese">Japanese</a></li>
+                            <li><a alt="Korean tutors" title="Korean tutors" href="/subject/korean">Korean</a></li>
+                            <li><a alt="Latin tutors" title="Latin tutors" href="/subject/latin">Latin</a></li>
+                            <li><a alt="Mandarin tutors" title="Mandarin tutors" href="/subject/mandarin">Mandarin</a></li>
+                            <li><a alt="Portuguese tutors" title="Portuguese tutors" href="/subject/portuguese">Portuguese</a></li>
+                            <li><a alt="Russian tutors" title="Russian tutors" href="/subject/russian">Russian</a></li>
+                            <li><a alt="Spanish tutors" title="Spanish tutors" href="/subject/spanish">Spanish</a></li>
+              <div style="clear:both;"></div>          </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/humanities-tutors">Humanities tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Arts tutors" title="Arts tutors" href="/subject/arts">Arts</a></li>
+                            <li><a alt="Communication tutors" title="Communication tutors" href="/subject/communication">Communication</a></li>
+                            <li><a alt="Education tutors" title="Education tutors" href="/subject/education">Education</a></li>
+                            <li><a alt="English tutors" title="English tutors" href="/subject/english">English</a></li>
+                            <li><a alt="Political Science tutors" title="Political Science tutors" href="/subject/political-science">Political Science</a></li>
+                            <li><a alt="Ethnic Studies tutors" title="Ethnic Studies tutors" href="/subject/ethnic-studies">Ethnic Studies</a></li>
+                            <li><a alt="Film and Theater tutors" title="Film and Theater tutors" href="/subject/film-and-theater">Film and Theater</a></li>
+                            <li><a alt="Gender Studies tutors" title="Gender Studies tutors" href="/subject/gender-studies">Gender Studies</a></li>
+                            <li><a alt="Linguistics tutors" title="Linguistics tutors" href="/subject/linguistics">Linguistics</a></li>
+                            <li><a alt="Literature tutors" title="Literature tutors" href="/subject/literature">Literature</a></li>
+                            <li><a alt="Music tutors" title="Music tutors" href="/subject/music">Music</a></li>
+                            <li><a alt="Philosophy tutors" title="Philosophy tutors" href="/subject/philosophy">Philosophy</a></li>
+                            <li><a alt="Religious Studies tutors" title="Religious Studies tutors" href="/subject/religious-studies">Religious Studies</a></li>
+                            <li><a alt="Writing tutors" title="Writing tutors" href="/subject/writing">Writing</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/test-prep-tutors">Test Prep tutors</a>:</h4>
+          <ul>
+                        <li><a alt="SAT tutors" title="SAT tutors" href="/subject/sat">SAT</a></li>
+                            <li><a alt="ACT tutors" title="ACT tutors" href="/subject/act">ACT</a></li>
+                            <li><a alt="GMAT tutors" title="GMAT tutors" href="/subject/gmat">GMAT</a></li>
+                            <li><a alt="GED tutors" title="GED tutors" href="/subject/ged">GED</a></li>
+                            <li><a alt="GRE tutors" title="GRE tutors" href="/subject/gre">GRE</a></li>
+                            <li><a alt="LSAT tutors" title="LSAT tutors" href="/subject/lsat">LSAT</a></li>
+                            <li><a alt="MAT tutors" title="MAT tutors" href="/subject/mat">MAT</a></li>
+                            <li><a alt="MCAT tutors" title="MCAT tutors" href="/subject/mcat">MCAT</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/programming-tutors">Programming tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Matlab tutors" title="Matlab tutors" href="/subject/matlab">Matlab</a></li>
+                            <li><a alt="Java tutors" title="Java tutors" href="/subject/java">Java</a></li>
+                            <li><a alt="Objective-C tutors" title="Objective-C tutors" href="/subject/objective-c">Objective-C</a></li>
+                            <li><a alt="Basic tutors" title="Basic tutors" href="/subject/basic">Basic</a></li>
+                            <li><a alt="PHP tutors" title="PHP tutors" href="/subject/php">PHP</a></li>
+                            <li><a alt="Python tutors" title="Python tutors" href="/subject/python">Python</a></li>
+                            <li><a alt="Javascript tutors" title="Javascript tutors" href="/subject/javascript">Javascript</a></li>
+                            <li><a alt="Ruby tutors" title="Ruby tutors" href="/subject/ruby">Ruby</a></li>
+                            <li><a alt="HTML tutors" title="HTML tutors" href="/subject/html">HTML</a></li>
+                            <li><a alt="C tutors" title="C tutors" href="/subject/c">C</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/history-tutors">History tutors</a>:</h4>
+          <ul>
+                        <li><a alt="American History tutors" title="American History tutors" href="/subject/american-history">American History</a></li>
+                            <li><a alt="AP US History tutors" title="AP US History tutors" href="/subject/ap-us-history">AP US History</a></li>
+                            <li><a alt="Art History tutors" title="Art History tutors" href="/subject/art-history">Art History</a></li>
+                            <li><a alt="European History tutors" title="European History tutors" href="/subject/european-history">European History</a></li>
+                            <li><a alt="World History tutors" title="World History tutors" href="/subject/world-history">World History</a></li>
+                            <li><a alt="AP American History tutors" title="AP American History tutors" href="/subject/ap-american-history">AP American History</a></li>
+                            <li><a alt="British History tutors" title="British History tutors" href="/subject/british-history">British History</a></li>
+                            <li><a alt="Western Civilization tutors" title="Western Civilization tutors" href="/subject/western-civilization">Western Civilization</a></li>
+                        </ul>
+        </span>
+                <span class="col-md-2">
+          <h4><a class="subject-lp-heading" href="/adobe-creative-cloud-tutors">Adobe Creative Cloud tutors</a>:</h4>
+          <ul>
+                        <li><a alt="Adobe Photoshop tutors" title="Adobe Photoshop tutors" href="/subject/adobe-photoshop">Adobe Photoshop</a></li>
+                            <li><a alt="Adobe Lightroom tutors" title="Adobe Lightroom tutors" href="/subject/adobe-lightroom">Adobe Lightroom</a></li>
+                            <li><a alt="Adobe Illustrator tutors" title="Adobe Illustrator tutors" href="/subject/adobe-illustrator">Adobe Illustrator</a></li>
+                            <li><a alt="Adobe InDesign tutors" title="Adobe InDesign tutors" href="/subject/adobe-indesign">Adobe InDesign</a></li>
+                            <li><a alt="Adobe Experience Design tutors" title="Adobe Experience Design tutors" href="/subject/adobe-experience-design">Adobe Experience Design</a></li>
+                            <li><a alt="Adobe Premiere tutors" title="Adobe Premiere tutors" href="/subject/adobe-premiere">Adobe Premiere</a></li>
+                            <li><a alt="Adobe After Effects tutors" title="Adobe After Effects tutors" href="/subject/adobe-after-effects">Adobe After Effects</a></li>
+                            <li><a alt="Adobe Dreamweaver tutors" title="Adobe Dreamweaver tutors" href="/subject/adobe-dreamweaver">Adobe Dreamweaver</a></li>
+                            <li><a alt="Adobe Audition tutors" title="Adobe Audition tutors" href="/subject/adobe-audition">Adobe Audition</a></li>
+                        </ul>
+        </span>
+              </div>
+
+  </div>
+</div>
+
+<div id="community">
+    <div class="prop">
+      <h1>Unparalleled Community</h1>
+      <h2>Thousands of students and tutors use our platform to connect and interact anytime, anywhere.</h2>
+      <ul class="featured_tutors">
+                <li>
+            <a href="/Ariel"><img src="_data/avatars/5/s_5474011141331129235491885652491237373.jpg" ></a>
+            <p><strong>Ari B.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/statistics">Statistics</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/"></a></p>
+          </li>
+                    <li>
+            <a href="/Christopher"><img src="_data/avatars/5/s_3805502148571275490798482745317907840.jpg" ></a>
+            <p><strong>Christopher C.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/int--microeconomic-theory-eco-303">Int  Microeconomic T</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/georgetown-university">Georgetown University</a></p>
+          </li>
+                    <li>
+            <a href="/Liang"><img src="_data/avatars/8/s_5342377142523426896398369453320496366.jpg" ></a>
+            <p><strong>Liang</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/introduction-to-microeconomics">Introduction To Micr</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/state-university-of-new-york-at-albany">State University Of New York At Albany</a></p>
+          </li>
+                    <li>
+            <a href="/Richard"><img src="_data/avatars/2/s_5505207139741207195880219647469953270.jpg" ></a>
+            <p><strong>Reza S.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/integral-calculus--ubc-math-101--math-105-math-103">Integral Calculus  U</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-british-columbia">University Of British Columbia</a></p>
+          </li>
+                    <li>
+            <a href="/Andy_Lee"><img src="_data/avatars/14/s_5130121147490773179595291745654647406.jpg" ></a>
+            <p><strong>Andy</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/linear-algebra">Linear Algebra</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/mcmaster-university">McMaster University</a></p>
+          </li>
+                    <li>
+            <a href="/kkhalil"><img src="_data/avatars/5/s_3909303150043446388790286051671226551.jpg" ></a>
+            <p><strong>Khaled K.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/programming">Programming</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/universit---de-bourgogne">Université De Bourgogne</a></p>
+          </li>
+                    <li>
+            <a href="/MichCMann"><img src="_data/avatars/11/s_5384030143827050485281771153979693753.jpg" ></a>
+            <p><strong>Michelle N.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/human-anatomy-and-physiology">Human Anatomy And Ph</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-calgary">University Of Calgary</a></p>
+          </li>
+                    <li>
+            <a href="/ProfZach"><img src="_data/avatars/5/s_3883366150809280991787419348083935669.jpg" ></a>
+            <p><strong>ProfZach</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/econometrics">Econometrics</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/kenyatta-university">Kenyatta University</a></p>
+          </li>
+                    <li>
+            <a href="/YA"><img src="_data/avatars/2/s_3039679148479378684495798154466720330.jpg" ></a>
+            <p><strong>Yasser A.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/calculus-i-mth101">Calculus I MTH101</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/lebanese-american-university">Lebanese American University</a></p>
+          </li>
+                    <li>
+            <a href="/Terri"><img src="_data/avatars/8/s_5471932149947526885497907054577461788.jpg" ></a>
+            <p><strong>Terri P.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/english-composition-i--eng-100-">English Composition </a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-hawaii-at-hilo">University Of Hawaii At Hilo</a></p>
+          </li>
+                    <li>
+            <a href="/PugStardock"><img src="_data/avatars/13/s_2465505149563035357198255247357576806.jpg" ></a>
+            <p><strong>Fabiano A.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/mathematics">Mathematics</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/instituto-nacional-de-matem--tica-pura-e-aplicada">Instituto Nacional De Matemática Pura E Aplicada</a></p>
+          </li>
+                    <li>
+            <a href="/instagram"><img src="_data/avatars/14/s_5513079149315155599878879453170275409.jpg" ></a>
+            <p><strong>Insta T.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/instagram">Instagram</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/ig-university">IG University</a></p>
+          </li>
+                    <li>
+            <a href="/Jess_H"><img src="_data/avatars/2/s_3221489144384222389887303746429077999.jpg" ></a>
+            <p><strong>Jess_H</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/differential-calculus">Differential Calculu</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/st--francis-xavier-university">St. Francis Xavier University</a></p>
+          </li>
+                    <li>
+            <a href="/AlexNosMath"><img src="_data/avatars/7/s_1974895150320826972698996148869148828.jpg" ></a>
+            <p><strong>Alex</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/functions--grade-11--mcr3u">Functions  Grade 11 </a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-toronto">University Of Toronto</a></p>
+          </li>
+                    <li>
+            <a href="/ptrsinclair"><img src="_data/avatars/10/s_1873677143136398089382946850428347270.jpg" ></a>
+            <p><strong>Peter S.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/abstract-algebra">Abstract Algebra</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/mcmaster-university">McMaster University</a></p>
+          </li>
+                    <li>
+            <a href="/hasannagib"><img src="_data/avatars/12/s_2756433144383077583488795351591720870.jpg" ></a>
+            <p><strong>Ĥasan N.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/differential-calculus--ubc-math-100-math-104--math-180-math-184">Differential Calculu</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-british-columbia">University Of British Columbia</a></p>
+          </li>
+                    <li>
+            <a href="/mzorif"><img src="_data/avatars/8/s_5157239145144935037784777246435723128.jpg" ></a>
+            <p><strong>Collins O.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/business">Business</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/jomo-kenyatta-university-of-agriculture-and-technology">Jomo Kenyatta University Of Agriculture And Technology</a></p>
+          </li>
+                    <li>
+            <a href="/Kay88"><img src="_data/avatars/13/s_2414761144427435294398143345130902232.jpg" ></a>
+            <p><strong>Kay F.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/introduction-to-statistics--stats-1000-">Introduction To Stat</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-manitoba">University Of Manitoba</a></p>
+          </li>
+                    <li>
+            <a href="/kLAU"><img src="_data/avatars/12/s_1140047148071344636287524046927071690.jpg" ></a>
+            <p><strong>Kevin L.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/ubc-engl-112-strategies-for-university-writing">UBC ENGL 112 Strateg</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-british-columbia">University Of British Columbia</a></p>
+          </li>
+                    <li>
+            <a href="/AkramK"><img src="_data/avatars/15/s_2851889141461374570478639751967790458.jpg" ></a>
+            <p><strong>Akram K.</strong></p>
+            <p><i class="fa fa-book"></i> <a href="/subject/principle-of-chemistry-chem-111-113">Principle Of Chemist</a></p>
+            <p><i class="fa fa-graduation-cap"></i> <a href="/networks/university-of-british-columbia">University Of British Columbia</a></p>
+          </li>
+                </ul>
+    </div>
+</div>
+
+<div id="fun">
+  <div class="container">
+      <h1>Help wherever you go.</h1>
+      <div class="landing_signup">
+        <a data-toggle="modal" href="#" data-target="#SignUpModal" class="signup_button">Sign up free</a> <a class="appstore_link" href="https://itunes.apple.com/us/app/helphub/id915930220?ls=1&mt=8"><img src="img/appstore_badge.png" alt="HelpHub on the App Store" /></a>
+      </div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+        <ul class="main_links">
+          <li><a href="/contact">Contact us</a></li>
+                      <li><a data-toggle="modal" href="/online-tutoring-jobs">Become a tutor</a></li>
+                    <!--<li><a href="http://blog.helphub.me">Blog</a></li>!-->
+          
+          <li><a href="/list-schools">Schools</a></li>
+          <li><a href="/list-cities">Cities</a></li>
+          <li><a href="/group-tutoring">Group Tutoring</a></li>
+          <li><a href="/press">Press</a></li>
+          <li><a href="http://institutions.helphub.com/" target="_blank">For Institutions</a></li>
+          <!---<li><a href="http://blog.helphub.me/help-and-support/">FAQs</a></li>!-->
+          <li class="footer_social"><a href="http://twitter.com/HelpHubHQ" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li class="footer_social"><a href="http://facebook.com/HelpHubHQ" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        </ul>
+        <ul class="footer_badges">
+          <li class="phone"><i class="fa fa-envelope-o fa-2"></i> Questions? <a href="mailto:support@helphub.me">support@helphub.me</a></li>
+          <li><a href="https://smarticon.geotrust.com/smarticonprofile?Referer=https://helphub.me"><img src="https://helphub.me/img/secured.png"></a></li>
+          <li><a href="https://mixpanel.com/f/partner"><img src="https://cdn.mxpnl.com/site_media/images/partner/badge_light.png"></a></li>
+        </ul>
+        <ul class="footer_copy">
+          <li><a href="/tos">Terms of Service</li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/academic-policy">Academic Integrity Policy</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li class="copyright_copy">&copy; HelpHub Services Inc. 2013 - 2018 – All rights reserved.</li>
+        </ul>
+    </div>
+
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1671208-29', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <script>
+  ga('require', 'Clearbit', {"mapping":{"companyName":"dimension1","companyDomain":"dimension2","companyTags":"dimension3","companySector":"dimension4","companyIndustryGroup":"dimension5","companyIndustry":"dimension6","companySubIndustry":"dimension7","companyType":"dimension8"}});
+</script>
+
+<script async src="https://ga.clearbit.com/v1/ga.js?authorization=pk_53ff92820248c1af189279a4297ae0b5"></script>
+
+  </div>
+
+
+<!-- Modals -->
+
+
+
+  <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Create a HelpHub account</h4>
+        </div>
+        <div class="modal-body">
+          <div id="SignUpModalForm">
+            <div class="social_signup_modal">
+              <a href="fblogin.php" class="fb_signup"><i class="fa fa-facebook-square"></i> Sign in with Facebook</a>
+              <p>Or sign up with your email:</p>
+            </div>
+
+              <form method="post" action="/signup" name="signupform" autocomplete="off">
+                <p><input type="text" value="" name="nick" maxlenght="60" class="modal-input-l"  placeholder="Choose a username (no spaces)"></p>
+                <p><input type="text" value="" name="semail" maxlenght="160" class="modal-input-l" placeholder="What's your email?"></p>   
+                <p><input type="password" name="pass" class="modal-input-l" placeholder="Create a password"></p>                             
+                
+                <div class="social_signup_modal">
+                  <p>By clicking "Sign up", you agree to our <a href="/tos" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
+                </div>
+
+                <p class="button">
+                  <input type="hidden" name="modal" value="1">
+                  <button type="submit" name="signup">Sign up</button>
+                </p>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="SignInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Log into your HelpHub account</h4>
+        </div>
+        <div class="modal-body">
+          <div id="LoginForm">
+            <div class="social_signup_modal">
+              <a href="fblogin.php" class="fb_signup"><i class="fa fa-facebook-square"></i> Sign in with Facebook</a>
+              <p>Or log in with your email:</p>
+            </div>
+
+              <form method="post" action="/login" name="loginform">
+                <p><input type="text" value="" name="semail" maxlenght="160" class="modal-input-l" placeholder="Your e-mail address"></p>
+                <p><input type="password" name="password" class="modal-input-l" placeholder="Your password"></p>                             
+                
+                <div class="social_signup_modal">
+                  <p><a href="/forgotpassword" target="_blank">Forgot your password?</a></p>
+                </div>
+
+                <p class="button">
+                  <button type="submit" name="signup">Log In</button>
+                </p>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
 
 

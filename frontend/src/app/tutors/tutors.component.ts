@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Tutor } from '../tutor';
-import { TUTORS } from '../mock-tutors';
 import { TutorService } from '../tutor.service';
 
 @Component({
