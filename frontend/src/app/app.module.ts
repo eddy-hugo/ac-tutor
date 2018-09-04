@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TutorSearchComponent } from './tutor-search/tutor-search.component'; 
 import { TutorService } from './tutor.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [ 
@@ -18,7 +19,8 @@ import { TutorService } from './tutor.service';
     TutorDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    TutorSearchComponent
+    TutorSearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
