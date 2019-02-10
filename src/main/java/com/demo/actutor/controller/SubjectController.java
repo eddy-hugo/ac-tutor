@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.actutor.dto.SubjectDTO;
 import com.demo.actutor.exception.ResourceNotFoundException;
+import com.demo.actutor.model.Subject;
 import com.demo.actutor.repository.SubjectRepository;
 
 @RestController
@@ -30,39 +30,39 @@ public class SubjectController {
     
     // Get all Subjects
     @GetMapping(path="/all")
-    public List<SubjectDTO> getAllSubjects() {
+    public List<Subject> getAllSubjects() {
         return SubjectRepository.findAll();
     }
     
     // Get a single Subject
     @GetMapping(path="/{id}")
-    public SubjectDTO getSubjectById(@PathVariable(value = "id") Long subjectId) {
+    public Subject getSubjectById(@PathVariable(value = "id") Long subjectId) {
         return SubjectRepository.findById(subjectId).orElseThrow(() -> new ResourceNotFoundException("Subject", "id", subjectId));
     }
     
     // Create a new Subject
     @PostMapping(path="/add")
-    public SubjectDTO addSubject(@Valid @RequestBody SubjectDTO subject) {
+    public Subject addSubject(@Valid @RequestBody Subject subject) {
 		return SubjectRepository.save(subject);
     }
 	
     // Update a Subject
     @PutMapping(path="/update/{id}")
-    public SubjectDTO updateSubject(@PathVariable(value = "id") Long subjectId, @Valid @RequestBody SubjectDTO subjectDetails) {
+    public Subject updateSubject(@PathVariable(value = "id") Long subjectId, @Valid @RequestBody Subject subjectDetails) {
 
-    	SubjectDTO subject = SubjectRepository.findById(subjectId).orElseThrow(() -> new ResourceNotFoundException("Subject", "id", subjectId));
+    	Subject subject = SubjectRepository.findById(subjectId).orElseThrow(() -> new ResourceNotFoundException("Subject", "id", subjectId));
 
     	subject.setSubjectName(subjectDetails.getSubjectName());
     	subject.setSubjectDescription(subjectDetails.getSubjectDescription());
     	
-    	SubjectDTO updatedSubject =SubjectRepository.save(subject);
+    	Subject updatedSubject =SubjectRepository.save(subject);
     	return updatedSubject;
     
     }
     // Delete a Subject
     @DeleteMapping(path="/delete/{id}")
     public ResponseEntity<?> deleteSubject(@PathVariable(value = "id") Long subjectId) {
-    	SubjectDTO subject = SubjectRepository.findById(subjectId).orElseThrow(() -> new ResourceNotFoundException("Subject", "id", subjectId));
+    	Subject subject = SubjectRepository.findById(subjectId).orElseThrow(() -> new ResourceNotFoundException("Subject", "id", subjectId));
 
     	SubjectRepository.delete(subject);
 

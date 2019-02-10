@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 
-import com.demo.actutor.dto.UserDTO;
+import com.demo.actutor.model.User;
 
 
 
@@ -16,7 +16,7 @@ public class RegistrationController {
 
 	@GetMapping(path = "/registration")
 	public String showRegistrationForm(WebRequest request, Model model) {
-		UserDTO userDto = new UserDTO();
+		User userDto = new User();
 		model.addAttribute("user", userDto);
 		return "registration";
 	}

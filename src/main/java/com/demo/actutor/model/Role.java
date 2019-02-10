@@ -1,4 +1,4 @@
-package com.demo.actutor.dto;
+package com.demo.actutor.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role")
-public class RoleDTO {
+public class Role {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,11 +47,11 @@ public class RoleDTO {
 		this.tutorId = tutorId;
 	}
 */
-	public List<UserDTO> getUsers() {
+	public List<User> getUsers() {
 		return users;
 	}
 
-	public void setUsers(List<UserDTO> users) {
+	public void setUsers(List<User> users) {
 		this.users = users;
 	}
 
@@ -61,7 +61,7 @@ public class RoleDTO {
 */
 
 	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<UserDTO> users = new ArrayList<>();
+	private List<User> users = new ArrayList<>();
 
 	public Long getId() {
 		return id;

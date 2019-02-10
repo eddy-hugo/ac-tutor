@@ -1,4 +1,4 @@
-package com.demo.actutor.dto;
+package com.demo.actutor.model;
 
 import java.util.Set;
 
@@ -24,7 +24,7 @@ import org.springframework.data.annotation.Transient;
 
 @Entity
 @Table(name = "user")
-public class UserDTO {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -52,31 +52,31 @@ public class UserDTO {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "role_id")
-	private RoleDTO role;
+	private Role role;
 	
 	@OneToOne
 	@JoinColumn(name = "tutor_id")
-	private TutorDTO tutor;
+	private Tutor tutor;
 	
 	@OneToOne
 	@JoinColumn(name = "student_id")
-	private StudentDTO student;
+	private Student student;
 
 
 
-	public TutorDTO getTutor() {
+	public Tutor getTutor() {
 		return tutor;
 	}
 
-	public void setTutor(TutorDTO tutor) {
+	public void setTutor(Tutor tutor) {
 		this.tutor = tutor;
 	}
 
-	public StudentDTO getStudent() {
+	public Student getStudent() {
 		return student;
 	}
 
-	public void setStudent(StudentDTO student) {
+	public void setStudent(Student student) {
 		this.student = student;
 	}
 
@@ -105,11 +105,11 @@ public class UserDTO {
 		this.password = password;
 	}
 
-	public RoleDTO getRole() {
+	public Role getRole() {
 		return role;
 	}
 
-	public void setRole(RoleDTO role) {
+	public void setRole(Role role) {
 		this.role = role;
 	}
 

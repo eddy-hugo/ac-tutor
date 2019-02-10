@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.actutor.dto.SessionDTO;
 import com.demo.actutor.exception.ResourceNotFoundException;
+import com.demo.actutor.model.Session;
 import com.demo.actutor.repository.SessionRepository;
 
 @RestController
@@ -31,46 +31,46 @@ public class SessionController {
     
     // Get All sessions
     @GetMapping(path="/all")
-    public List<SessionDTO> getAllSessions() {
+    public List<Session> getAllSessions() {
         return sessionRepository.findAll();
     }
     
     // Get a Single session
     @GetMapping(path="/{id}")
-    public SessionDTO getSessionById(@PathVariable(value = "id") Long sessionId) {
+    public Session getSessionById(@PathVariable(value = "id") Long sessionId) {
         return sessionRepository.findById(sessionId).orElseThrow(() -> new ResourceNotFoundException("Session", "id", sessionId));
     }
     // Create a new session
     @PostMapping(path="/add")
-    public SessionDTO addSession(@Valid @RequestBody SessionDTO session) {
+    public Session addSession(@Valid @RequestBody Session session) {
 		return sessionRepository.save(session);
     }
     //Create a new Set of sessions
     @PostMapping(path="/adds")
-    public void addSessions(@Valid @RequestBody Set<SessionDTO> sessions) {
+    public void addSessions(@Valid @RequestBody Set<Session> sessions) {
     	sessions.stream().forEach(s -> addSession(s));
     }
     
     // Update a session
     @PutMapping(path="/update/{id}")
-    public SessionDTO updateSession(@PathVariable(value = "id") Long sessionId, @Valid @RequestBody SessionDTO sessionDetails) {
+    public Session updateSession(@PathVariable(value = "id") Long sessionId, @Valid @RequestBody Session sessionDetails) {
 
-    	SessionDTO session = sessionRepository.findById(sessionId).orElseThrow(() -> new ResourceNotFoundException("Session", "id", sessionId));
+    	Session session = sessionRepository.findById(sessionId).orElseThrow(() -> new ResourceNotFoundException("Session", "id", sessionId));
 
-    	session.setDatetime(sessionDetails.getDatetime());
+    	//session.setDatetime(sessionDetails.getDatetime());
     	session.setStudent(sessionDetails.getStudent());
     	session.setSubject(sessionDetails.getSubject());
     	session.setTutor(sessionDetails.getTutor());
     	session.setSessionDescription(sessionDetails.getSessionDescription());
     	
-    	SessionDTO updatedSession =sessionRepository.save(session);
+    	Session updatedSession =sessionRepository.save(session);
     	return updatedSession;
     
     }
     // Delete a session
     @DeleteMapping(path="/delete/{id}")
     public ResponseEntity<?> deleteSession(@PathVariable(value = "id") Long sessionId) {
-    	SessionDTO session = sessionRepository.findById(sessionId).orElseThrow(() -> new ResourceNotFoundException("Session", "id", sessionId));
+    	Session session = sessionRepository.findById(sessionId).orElseThrow(() -> new ResourceNotFoundException("Session", "id", sessionId));
 
     	sessionRepository.delete(session);
 

@@ -1,4 +1,4 @@
-package com.demo.actutor.dto;
+package com.demo.actutor.model;
 
 import java.util.Set;
 
@@ -17,7 +17,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "tutor")
-public class TutorDTO {
+public class Tutor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "tutor_id")
@@ -47,17 +47,12 @@ public class TutorDTO {
 	@ManyToMany
 	@JoinTable(name = "tutor_subjects", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "subject_id") })
-	private Set<SubjectDTO> subjects;
-	
-	@ManyToMany
-	@JoinTable(name = "tutor_available_time", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "time_id") })
-	private Set<DatetimeDTO> availableTime;
+	private Set<Subject> subjects;
 	
 	@ManyToMany
 	@JoinTable(name = "sessions", joinColumns = { @JoinColumn(name = "tutor_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "session_id") })
-	private Set<SessionDTO> sessions;
+	private Set<Session> sessions;
 
 	public Long getId() {
 		return id;
@@ -107,27 +102,19 @@ public class TutorDTO {
 		this.phone = phone;
 	}
 
-	public Set<SubjectDTO> getSubjects() {
+	public Set<Subject> getSubjects() {
 		return subjects;
 	}
 
-	public void setSubjects(Set<SubjectDTO> subjects) {
+	public void setSubjects(Set<Subject> subjects) {
 		this.subjects = subjects;
 	}
 
-	public Set<DatetimeDTO> getAvailableTime() {
-		return availableTime;
-	}
-
-	public void setAvailableTime(Set<DatetimeDTO> availableTime) {
-		this.availableTime = availableTime;
-	}
-
-	public Set<SessionDTO> getSessions() {
+	public Set<Session> getSessions() {
 		return sessions;
 	}
 
-	public void setSessions(Set<SessionDTO> sessions) {
+	public void setSessions(Set<Session> sessions) {
 		this.sessions = sessions;
 	}
 	

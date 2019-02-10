@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.demo.actutor.dto.UserDTO;
+import com.demo.actutor.model.User;
 import com.demo.actutor.service.UserService;
 
 
@@ -28,7 +28,7 @@ public class LoginController {
 	public ModelAndView test() {
 		ModelAndView modelAndView = new ModelAndView();
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		UserDTO user = userService.findUserByEmail(auth.getName());
+		User user = userService.findUserByEmail(auth.getName());
 		modelAndView.addObject("userName", "Welcome " + user.getName() + " (" + user.getEmail() + ")");
 		modelAndView.addObject("userMessage", "Content Available Only for Users with <Strong><em>User</em></Strong> Role");
 		modelAndView.setViewName("user/test");

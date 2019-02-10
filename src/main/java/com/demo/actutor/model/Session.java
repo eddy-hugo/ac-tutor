@@ -1,4 +1,6 @@
-package com.demo.actutor.dto;
+package com.demo.actutor.model;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "session")
-public class SessionDTO {
+public class Session {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,19 +23,22 @@ public class SessionDTO {
 	
 	@OneToOne
 	@JoinColumn(name = "student_id")
-	private StudentDTO student;
+	private Student student;
 	
 	@OneToOne
 	@JoinColumn(name = "tutor_id")
-	private TutorDTO tutor;
+	private Tutor tutor;
 	
 	@OneToOne
 	@JoinColumn(name = "subject_id")
-	private SubjectDTO subject;
+	private Subject subject;
 	
-	@OneToOne
-	@JoinColumn(name = "datetime_id")
-	private DatetimeDTO datetime;
+	@Column(name = "start_date",nullable=false)
+	private Date startDateTime;
+	
+	@Column(name = "end_date",nullable=false)
+	private Date endDateTime;
+	
 	
 	@Column(name = "session_description")
 	private String sessionDescription;
@@ -46,36 +51,28 @@ public class SessionDTO {
 		this.id = id;
 	}
 
-	public StudentDTO getStudent() {
+	public Student getStudent() {
 		return student;
 	}
 
-	public void setStudent(StudentDTO student) {
+	public void setStudent(Student student) {
 		this.student = student;
 	}
 
-	public TutorDTO getTutor() {
+	public Tutor getTutor() {
 		return tutor;
 	}
 
-	public void setTutor(TutorDTO tutor) {
+	public void setTutor(Tutor tutor) {
 		this.tutor = tutor;
 	}
 
-	public SubjectDTO getSubject() {
+	public Subject getSubject() {
 		return subject;
 	}
 
-	public void setSubject(SubjectDTO subject) {
+	public void setSubject(Subject subject) {
 		this.subject = subject;
-	}
-
-	public DatetimeDTO getDatetime() {
-		return datetime;
-	}
-
-	public void setDatetime(DatetimeDTO datetime) {
-		this.datetime = datetime;
 	}
 
 	public String getSessionDescription() {

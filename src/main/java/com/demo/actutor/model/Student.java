@@ -1,4 +1,4 @@
-package com.demo.actutor.dto;
+package com.demo.actutor.model;
 
 import java.util.Set;
 
@@ -16,7 +16,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "student")
-public class StudentDTO {
+public class Student {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,7 +47,7 @@ public class StudentDTO {
 	@ManyToMany
 	@JoinTable(name = "sessions", joinColumns = { @JoinColumn(name = "student_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "session_id") })
-	private Set<SessionDTO> sessions;
+	private Set<Session> sessions;
 
 	public Long getId() {
 		return id;
@@ -97,11 +97,11 @@ public class StudentDTO {
 		this.phone = phone;
 	}
 
-	public Set<SessionDTO> getSessions() {
+	public Set<Session> getSessions() {
 		return sessions;
 	}
 
-	public void setSessions(Set<SessionDTO> sessions) {
+	public void setSessions(Set<Session> sessions) {
 		this.sessions = sessions;
 	}
 	

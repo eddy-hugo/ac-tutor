@@ -3,12 +3,12 @@ package com.demo.actutor.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.demo.actutor.dto.UserDTO;
+import com.demo.actutor.model.User;
 
 
 @Repository("userRepository")
-public interface UserRepository extends JpaRepository<UserDTO, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
-	UserDTO findByEmail(String email);
+	User findByEmail(String email);
 	
 }

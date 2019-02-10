@@ -1,8 +1,8 @@
 package com.demo.actutor.service;
 
-import com.demo.actutor.dto.UserDTO;
+import com.demo.actutor.model.User;
 
 public interface UserService {
-	public UserDTO findUserByEmail(String email);
-	public void saveUser(UserDTO user);
+	public User findUserByEmail(String email);
+	public void saveUser(User user);
 }

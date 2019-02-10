@@ -1,4 +1,4 @@
-package com.demo.actutor.dto;
+package com.demo.actutor.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "subject")
-public class SubjectDTO {
+public class Subject {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
